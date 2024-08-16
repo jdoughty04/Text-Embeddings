@@ -13,5 +13,10 @@ In the get_embedding function, Distilbert-base-uncased (https://huggingface.co/d
 ## Dimensionality reduction
 For the task of visualizing the embeddings, I compared the performace of PCA and UMAP. The plots are interactive, so mousing over a point will show the text. UMAP is the more complex method and seemed to produce a marginally better 2D representation, which can be seen by mousing over the points and seeing how similar facts are grouped together, especially when looking at the more compartmentalized clusters of points. Several UMAP visualizations are made using different values of the n_neighbors parameter.
 
+Here is one of the umap plots. To interact with and see the rest of the plots, you'll need to run the notebook.
+![umap](umap.png)
+
 ## Search functionality
-Cosine similarity is a method to quantify the similarity in direction between two vectors. In the search function, an embedding vector is generated from the input query. It then computes the similarity with all the embeddings in the dataset and returns the top k most similar texts.
+Cosine similarity is a method used to quantify the similarity in direction between two vectors. In the search function, an embedding vector (the query) is generated from the input string. Then the similarity values between the query and the rest of the embeddings are computed, and the top k most similar texts are shown.
+
+![search](search.png)
